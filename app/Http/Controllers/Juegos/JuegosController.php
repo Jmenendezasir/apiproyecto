@@ -34,11 +34,5 @@ class JuegosController extends Controller
                 'data' => $juego
             ], 200);
         }
-        else {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Ha ocurrido un error al introducir los datos',
-            ], 201);
-        }
     }
 }
