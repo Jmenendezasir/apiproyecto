@@ -11,7 +11,7 @@ Route::post('login', [AuthController::class, 'login']);
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('logout', [AuthController::class, 'logout']);
     Route::get('user', [AuthController::class, 'getUser']);
+    Route::post('/juegos/insert', [JuegosController::class, 'insert']);
 });
 
 Route::get('/juegos', [JuegosController::class, 'index']);
-Route::post('/juegos/insert', [JuegosController::class, 'insert']);
