@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Juegos\JuegosController;
+use App\Http\Controllers\Categorias\CategoriasController;
+
 use App\Http\Controllers\Admin\AuthController;
 
 Route::post('register', [AuthController::class, 'signup']);
@@ -15,3 +17,4 @@ Route::group(['middleware' => 'auth:api'], function () {
 });
 
 Route::get('/juegos', [JuegosController::class, 'index']);
+Route::get('/categorias', [CategoriasController::class, 'index']);
